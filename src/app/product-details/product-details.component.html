@@ -1,8 +1,8 @@
-<h2>Product Details</h2>
+<h2 i18n="@@ProductDetailsHeader">Product Details</h2>
 
 <div *ngIf="product">
   <h3>{{ product.name }}</h3>
-  <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
-  <button type="button" (click)="addToCart(product)">Buy</button>
+  <h4 i18n="@@ProductPrice">{{ product.price | currency }}</h4>
+  <p i18n="@@ProductDescription">{{ product.description }}</p>
+  <button i18n="@@Buy" type="button" (click)="addToCart(product)">Buy</button>
 </div>

@@ -1,16 +1,21 @@
-<h2>Products</h2>
+<h2 i18n="@@ProductsHeader">Products</h2>
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' details '"
-       [routerLink]="['/products', product.id]">
+    <a
+      i18n="@@ProductName"
+      [title]="product.name + ' details '"
+      [routerLink]="['/products', product.id]"
+    >
       {{ product.name }}
     </a>
   </h3>
 
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
+  <p i18n="@@ProductDescription" *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
 
-  <button type="button" (click)="share()">Share</button>
+  <button i18n="@@Share" type="button" (click)="share()">Share</button>
   <app-product-alerts [product]="product" (notify)="onNotify()">
   </app-product-alerts>
 </div>
